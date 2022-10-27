@@ -45,12 +45,12 @@ def edits2(word):
 
 
 # %%
-# optionss = []
-# optionss.append(None)
-# for i in word_count.keys():
-#     optionss.append(i)    
+optionss = []
+optionss.append("")
+for i in word_count.keys():
+    optionss.append(i)    
 st.title("Spellchecker")
-the_word = st.selectbox("Choose a word:", word_count.keys())
+the_word = st.selectbox("Choose a word:", optionss)
 
 st.write("or")
 the_word = st.text_input("Type your own:", value=the_word)
