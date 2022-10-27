@@ -58,8 +58,9 @@ with st.sidebar:
     show = st.checkbox("show original word")
 if show:
     st.write("original word:", the_word)
-w = correction(the_word)
-if the_word == w:
-    st.success(the_word + " is the correct spelling")
-else:
-    st.error("Correction: " + w)
+if the_word != "":
+    w = correction(the_word)
+    if the_word == w:
+        st.success(the_word + " is the correct spelling")
+    else:
+        st.error("Correction: " + w)
